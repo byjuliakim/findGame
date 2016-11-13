@@ -140,19 +140,31 @@ body {
   background: #A7B0C1;
   width: 100%;
   height: 100vh;
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  padding: 30px; }
 
 header {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center; }
+  header .mainHead {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
   header h1 {
     font-family: 'Chewy', cursive;
-    display: inline;
-    font-size: 100px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 4rem;
     color: #4C4F5B;
     margin: 0; }
   header .flex {
@@ -163,22 +175,29 @@ header {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center;
-    font-size: 20px;
-    height: 100px;
-    width: 100px;
+    height: 77px;
+    width: 77px;
     color: white;
-    font-size: 60px;
+    font-size: 35px;
     background: #EF8354; }
   header i {
     color: white; }
+  header .timer {
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 15px 0;
+    color: #EF8354;
+    background: #D0D1D1;
+    border: 2px solid #4C4F5B;
+    border-radius: 10px; }
 
-.correct {
+.correct, .wrong {
   display: none;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 10;
+  z-index: 100;
   background: #8693AB;
   width: 300px;
   padding: 20px;
@@ -187,48 +206,37 @@ header {
   border: 2px solid #4C4F5B;
   border-radius: 10px;
   color: #4C4F5B; }
-  .correct button {
-    color: white;
-    background: #EF8354;
-    border: 2px solid #4C4F5B;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 17px; }
 
-.wrong {
-  display: none;
+.instruction {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 17%;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 10;
   background: #8693AB;
-  width: 300px;
+  width: 50%;
   padding: 20px;
   text-align: center;
-  font-size: 20px;
   border: 2px solid #4C4F5B;
   border-radius: 10px;
   color: #4C4F5B; }
-  .wrong button {
-    color: white;
-    background: #EF8354;
-    border: 2px solid #4C4F5B;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 17px; }
+
+button {
+  color: white;
+  background: #EF8354;
+  border: 2px solid #4C4F5B;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 17px; }
 
 .wrapper {
-  width: 90%;
-  height: 80%;
-  border: 5px solid #4C4F5B;
-  background: #BEBFCF;
+  width: 100%;
+  height: 100%;
   position: relative;
   border-radius: 20px; }
   .wrapper .icons {
     position: absolute; }
   .wrapper .icons:hover {
-    z-index: 10; }
+    z-index: 8; }
   .wrapper .flex {
     display: -ms-flexbox;
     display: flex;
@@ -238,12 +246,30 @@ header {
     -ms-flex-pack: center;
         justify-content: center;
     font-size: 20px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     background: #D0D1D1; }
   .wrapper .flex:hover {
     background: #EF8354; }
   .wrapper .fa {
     color: white; }
+
+@media (max-width: 530px) {
+  body {
+    padding: 15px; }
+  header h1 {
+    font-size: 3rem; }
+  header .flex {
+    height: 60px;
+    width: 60px;
+    font-size: 35px; }
+  .wrapper .flex {
+    height: 60px;
+    width: 60px;
+    font-size: 35px; } }
+
+@media (max-width: 390px) {
+  header h1 {
+    font-size: 2.5rem; } }
